@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body{
+    background: linear-gradient(to bottom right, rgba(245, 218, 241, 0.9) rgba(247, 246, 248, 0.9)), url(https://www.pexels.com/photo/flowers-on-a-white-background-4207567/);
+     background-repeat: no-repeat; 
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    /*background: #eee;*/
+    height: auto;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 2.5rem;
+    /*text-transform: uppercase;*//*transforms to uppercase even if text in not*/
+    margin: 0;
+    font-family: Lobster, Monospace;
+    color: rgb(231, 228, 228);
+
+}
+
+h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: capitalize;/*capitilizes first letter*/
+    margin: 0;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+main{
+    max-width: 900px;
+    margin: auto;/*Ends maximum width on full-screen to 900px and pushes it to the middle through margin*/
+    box-shadow: 30px 0px 40px rgba(49, 49, 49, 0.1), -30px 0px 40px rgba(68, 68, 68, 0.1);/*box-shadow: horizontal-offset, vertical-offset, blur, color;*/
+}
+
+#landing{
+    background: linear-gradient(#39a59c, #31f07a);
+   
+
+}
+
+#landing-text{
+    display: flex;
+    flex: 0 1 40vw; /*vw: view-port width; vh: view-port height; can be known as measurement of slices of the image*/
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    
+}
+
+/*#home {
+    /*background-image: url("https://i.imgur.com/cqSYVmU.jpg");*'/'
+    background-image: url("https://www.dentons.com/-/media/images/website/background-images/offices/san-francisco/sanfransisco_dreamstime_1.jpg");
+    background-size: cover;
+    }*/
+
+    #landing-text h2{
+        color: #888;
+    }
+
+    #landing-image{
+        background: url('../img/music.jpeg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+        flex: 0 1 60vw;
+        margin: 0;
+    }
+
+    #images{
+        display: grid;
+        grid-row-gap: 1em;
+    }
+
+   
+
+    .card img{
+        transition: 0.5s;
+    }
+    
+    .card a:hover img{
+        transform: rotateY(180deg);
+        background-size: 100%;
+        opacity: 0.9;
+    }
+
+    .btn{
+        padding: 0.5rem 2rem;
+        border: 1px #ccc solid;
+        display: inline-block;
+        margin: 2rem 0 0;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #333;
+        transition: background 500ms ease;/*Eases the hover transition to 0.5s*/
+    }
+
+    .btn:hover{
+        background: #b2ffe0;
+    }
+
+
+    .wrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .button {
+        width: 140px;
+        height: 45px;
+        font-family:'Roboto Condensed', sans-serif;
+        font-size: 11px;
+        border: 1.5px rgba(46, 229, 157, 0.4) solid;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: whitesmoke;
+        /*border: none;*/
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.7s ease 0s;
+        cursor: pointer;
+        outline: none;
+        }
+      
+      .button:hover {
+        background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+      /*  Back to top button  */
+      #button {
+        display: inline-block;
+        background-color: #2EE59D;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 50px;
+        right: 40px;
+        transition: background-color .3s, 
+          opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+      }
+      #button::after {
+        content: "\f077";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: #fff;
+      }
+      #button:hover {
+        cursor: pointer;
+        background-color: #333;
+      }
+      #button:active {
+        background-color: #555;
+      }
+      #button.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+   
+    #header{
+        padding: 1.1rem;
+        text-align: center;
+        background: rgb(216, 214, 214);
+        color: rgb(66, 66, 66);
+    }
+
+    #header h2{
+        border-left: dotted 0.1px rgb(184, 183, 183);
+        border-right: dotted 0.1px rgb(184, 183, 183);
+        display: inline-block;
+        padding: 0 1rem ;
+    }
+
+
+    footer{
+        text-align: center;
+        padding: 2rem 1rem;
+        margin: auto;
+        color: #333;
+    }
+
+    footer h3{
+        font-size: 1.7rem;
+        margin-bottom: 0;
+    }
+
+    /*Screen sizes 600px and above,since its larger screens we use min-width*/
+    @media(min-width: 600px){
+        #landing{
+            display: flex;
+            height: 100%;
+        }
+
+        #landing-text{
+            height: 100vh;
+        }
+        #landing-image{
+            height: 100vh;
+        }
+    }
+
+    /*Screen Sizes 700px and up*/
+    @media(min-width: 700px){
+        
+        .btn{
+            padding: 1rem 3rem;
+        }
+    }
